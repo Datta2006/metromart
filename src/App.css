@@ -1,0 +1,98 @@
+/* General Page Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Ensure the app takes full width */
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Main Content - Fully Responsive */
+.main-content {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Heading and Paragraph */
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+}
+
+p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Responsive Image */
+.background {
+  max-width: 100%;
+  height: auto;
+  border: 4px dotted rgb(50, 49, 49);
+  border-radius: 3em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Cards Layout - Fully Responsive */
+.allig {
+  display: flex;
+  justify-content: center;  /* Centers cards on all devices */
+  gap: 20px;
+  flex-wrap: wrap; /* Ensures wrapping on small screens */
+  margin-top: 20px;
+  padding: 0 2em; /* Reduce padding for small screens */
+}
+
+/* Hover Effect on Background */
+.background:hover {
+  transform: scale(1.05); /* Slight zoom to prevent overflow */
+  box-shadow: 0px 4px 20px rgba(255, 255, 255, 0.6);
+  border: 5px solid rgb(50, 49, 49);
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+  .main-content {
+    width: 95%; /* Slightly wider on smaller screens */
+    padding: 15px;
+  }
+
+  .background {
+    border-radius: 2em;
+  }
+
+  .allig {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center;
+    gap: 15px; /* Reduce gap on small screens */
+    padding: 0 1em; /* Reduce padding */
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+}
